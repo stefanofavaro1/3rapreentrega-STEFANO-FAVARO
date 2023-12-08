@@ -1,0 +1,37 @@
+.menu-carrito{
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+
+/* Estilos para el carrito */
+#carrito {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/* Estilos para el contenido del carrito */
+#carrito-content {
+    position: fixed;
+    
+    display: none;
+
+    top: 30px;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    z-index: 1000;
+}

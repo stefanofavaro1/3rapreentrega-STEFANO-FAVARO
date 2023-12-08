@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC GAMING</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="carrito.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>PC GAMING</h1>
+
+    <nav class="navbar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="carrito.html">Pagar Carrito</a></li>
+            </ul>
+        </nav>
+        
+    </nav>
+
+    <h2>Estas son las principales características de los productos</h2>
+    <p class="parrafo">Fuente de poder de 750W: Con la fuente de alimentación MSI A750GF podrás asegurar la corriente continua y estable de tu computadora de escritorio y optimizar el funcionamiento de sus componentes</p>
+    <p class="parrafo">Procesador Ryzen 5 5600:Este procesador cuenta con 6 nucleos, 12 hilos, y una frecuencia de hasta 4,4 GHz con soporte para tecnología DDR4 de alta frecuencia.
+     La serie 5000 de Ryzen llegó para romper todos los esquemas. Esta vez con su Ryzen 5 5600G y Gráficos integrados vas a poder utilizarlo para la tarea que desees, como edición, render, gaming, TODO LO QUE QUIERAS..</p>
+    <p class="parrafo">Gabinete gamer:Gabinete Gamer con iluminación RGB, ideal para configuraciones de gaming de alto rendimiento.
+        Diseño de estructura Mid Tower con lateral transparente, compatible con placas madre ATX y Micro-ATX..</p>
+    <p class="parrafo">Monitor Samsung 24 T350: Ofrece una experiencia de entretenimiento sumamente fluida, ya que mantiene sincronizada la frecuencia de actualización del monitor y la tarjeta gráfica, reduciendo el desgarro y el parpadeo de la imagen. Así, puedes disfrutar de tus películas y videojuegos sin interrupciones, ya que incluso las escenas de acción rápida lucen claras. .</p> 
+
+    <main class="product-flex">
+        <div class="product">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_874064-MLU70654386268_072023-O.webp" alt="Producto 1, Fuente de poder 750W">
+            <h3>Fuente de poder 750W</h3>
+            <p>Precio: 44900 </p>
+            <button onclick="agregarAlCarrito('Fuente de poder 750W', 44900 )">Agregar al Carrito</button>
+        </div>
+        <div class="product">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_951588-MLA47234187266_082021-O.webp" alt="Producto 2, Procesador ryzen 5 5600">
+            <h3>Procesador ryzen 5 5600</h3>
+            <p>Precio: 122200 </p>
+            <button onclick="agregarAlCarrito('Procesador ryzen 5 5600', 122200 )">Agregar al Carrito</button>
+        </div>
+        <div class="product">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_704901-MLU72637226449_112023-O.webp" alt="Producto 3, Gabinete gamer">
+            <h3>Gabinete gamer</h3>
+            <p>Precio: 90000 </p>
+            <button id="onclick" onclick="agregarAlCarrito('Gabinete gamer', 90000)">Agregar al Carrito</button>
+        </div>
+        <div class="product">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_795508-MLU72628800344_112023-O.webp" alt="Producto 4, Monitor Samsung T350">
+            <h3>Monitor Samsung T350</h3>
+            <p>Precio: 100000 </p>
+            <button onclick="agregarAlCarrito('Monitor Samsung T350', 100000)">Agregar al Carrito</button>
+        </div>
+
+        <!-- Agregar más productos -->
+    </main>
+    <container class="menu-carrito">
+        <div class="carrito" id="carrito">
+            <div class="carrito-content" id="carrito-content"></div>
+        </div>
+    </container>
+    <footer>
+        <p>Todos los derechos reservados &copy; 2023 PC GAMING</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
