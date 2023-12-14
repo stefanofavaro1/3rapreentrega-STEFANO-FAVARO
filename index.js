@@ -132,13 +132,24 @@ const eventoFuturo = (res) => {
            console.log("Finalizó el proceso");
        })
 
-      fetch('https://criptoya.com/api/dolar') 
-      .then((response) => response.json())
-      .then(({blue, ccl, mep, oficial}) => {
-        
-           console.log(blue)
-           console.log(ccl)
-           console.log(mep)
-           console.log(oficial)
-        })
-        
+    //   fetch('https://criptoya.com/api/dolar') 
+    //   .then((response) => response.json())
+    //   .then(({blue, ccl, mep, oficial}) => {
+    //     let tipoDeCambio = document.getElementById("criptoya");
+    //     const marquesinaTc = document.createElement("div");
+    //     marquesinaTc.innerHTML =  `<marquee> Blue: ${blue} | Ccl: ${ccl} | Mep: ${mep} | Oficial: ${oficial} </marquee>`
+    //     marquesinaTc.appendChild(tipoDeCambio);
+    //     console.log(tipoDeCambio)
+    //     })
+    fetch('https://criptoya.com/api/dolar') 
+    .then((response) => response.json())
+    .then(({blue, ccl, mep, oficial}) => {
+        const tipoDeCambio = document.getElementById("criptoya");
+        const marquesinaTc = document.createElement("div");
+        marquesinaTc.innerHTML = `<marquee> Blue: ${blue} | Ccl: ${ccl} | Mep: ${mep} | Oficial: ${oficial} |  Blue: ${blue} | Ccl: ${ccl} | Mep: ${mep} | Oficial: ${oficial} |  Blue: ${blue} | Ccl: ${ccl} | Mep: ${mep} | Oficial: ${oficial} |  Blue: ${blue} | Ccl: ${ccl} | Mep: ${mep} | Oficial: ${oficial} </marquee>`;
+        tipoDeCambio.appendChild(marquesinaTc); // Agregar marquesinaTc al contenedor tipoDeCambio
+        console.log(tipoDeCambio);
+    })
+    .catch((error) => {
+    swal('Ha ocurrido un error:', error);
+  });
